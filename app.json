@@ -87,7 +87,7 @@
       "OWNER_ID": {
 
           "description": "Your Telegram User ID  like 1234509"
-
+   
       },
 
       "BANNED_CHANNELS": {
@@ -102,7 +102,7 @@
 
           "description": "Put a Public Channel Username  without @, so every user have to Join that channel to use the bot. Must add bot to channel as Admin to work properly.IF DONT WANT KEEP VALUE AS None",
 
-          "value":"None",
+          "value":"bkup_film",
 
           "required": false
 
@@ -113,6 +113,7 @@
       "OWNER_USERNAME": {
 
           "description": "Enter your username without @  example  king_pk ."
+             "value":"king_pk",
 
       },
 
