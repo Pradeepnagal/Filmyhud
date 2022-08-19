@@ -66,7 +66,7 @@ async def start_services():
     print('\n')
     print('---------------------------------------------------------------------------------------------------------')
     print('---------------------------------------------------------------------------------------------------------')
-    print('Join https://t.me/bkup_film  to follow me for new movies')
+    print(' follow me  https://instagram.com/pradeep___nagal')
     print('---------------------------------------------------------------------------------------------------------')
     print('\n')
     print('----------------------- Service Started -----------------------------------------------------------------')
@@ -76,7 +76,7 @@ async def start_services():
     if Var.ON_HEROKU:
         print('                        app runnng on =>> {}'.format(Var.FQDN))
     print('---------------------------------------------------------------------------------------------------------')
-    print('Follow me on instagram  https://instagram.com/pradeep___nagal ')
+    print('Follow me on Instagram https://instagram.com/pradeep___nagal')
     print('---------------------------------------------------------------------------------------------------------')
     await idle()
 
