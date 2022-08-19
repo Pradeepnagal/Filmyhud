@@ -17,16 +17,16 @@ async def maintainers(b,m):
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="I am Coded By [Pradeep Nagal](https://instagram.com/pradeep___nagal)",
+                    text="I am Coded By [Pradeep Nagal](https://t.me/king_pk)",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Developer💻", url=f"https://t.me/king_pk")
+                                InlineKeyboardButton("Developer💻", url=f"https://instagram.com/pradeep___nagal")
                             ]
                         ]
                     ),
-                    parse_mode="markdown",
+                    
                     disable_web_page_preview=True)
             
          
@@ -46,7 +46,7 @@ async def follow_user(b,m):
                             ]
                         ]
                     ),
-                    parse_mode="HTML",
+                    
                     disable_web_page_preview=True)
         
 
@@ -65,9 +65,8 @@ async def start(bot, update):
 async def list(l, m):
     LIST_MSG = "Hi! {} Here is a list of all my commands \n \n 1 . `start⚡️` \n 2. `help📚` \n 3. `login🔑` \n 4.`follow❤️` \n 5. `ping📡` \n 6. `status📊` \n 7. `DC` this tells your telegram dc \n 8. `maintainers😎` "
     await l.send_message(chat_id = m.chat.id,
-        text = LIST_MSG.format(m.from_user.mention(style="md")),
-        reply_to_message_id = m.message_id,
-        parse_mode="markdown"
+        text = LIST_MSG.format(m.from_user.mention(style="md"))
+        
     )
     
     

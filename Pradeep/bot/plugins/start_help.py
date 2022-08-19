@@ -1,3 +1,4 @@
+
 from Pradeep.bot import StreamBot
 from Pradeep.vars import Var
 import logging
@@ -9,7 +10,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from Pradeep.utils.file_properties import get_name, get_hash, get_media_file_size
-db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
+db = Database(Var.DATABASE_URL, Var.name)
 from pyrogram.types import ReplyKeyboardMarkup
 
 if MY_PASS:
@@ -33,7 +34,7 @@ else:
 
             
             
-@StreamBot.on_message((filters.command("start") | filters.regex('start⚡️')) & filters.private & ~filters.edited)
+@StreamBot.on_message((filters.command("start") | filters.regex('start⚡️')) & filters.private )
 async def start(b, m):
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id)
@@ -47,8 +48,7 @@ async def start(b, m):
             if user.status == "kicked":
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="__𝓢𝓞𝓡𝓡𝓨, 𝓨𝓞𝓤 𝓐𝓡𝓔 𝓑𝓐𝓝𝓝𝓔𝓓 𝓕𝓡𝓞𝓜 𝓤𝓢𝓘𝓝𝓖 𝓜𝓔. 𝓒ᴏɴᴛᴀᴄᴛ ᴛʜᴇ 𝓓ᴇᴠᴇʟᴏᴘᴇʀ__\n\n @king_pk **𝙃𝙚 𝙬𝙞𝙡𝙡 𝙝𝙚𝙡𝙥 𝙮𝙤𝙪**",
-                    parse_mode="markdown",
+                    text="__𝓢𝓞𝓡𝓡𝓨, 𝓨𝓞𝓤 𝓐𝓡𝓔 𝓐𝓡𝓔 𝓑𝓐𝓝𝓝𝓔𝓓 𝓕𝓡𝓞𝓜 𝓤𝓢𝓘𝓝𝓖 𝓜𝓔. 𝓒ᴏɴᴛᴀᴄᴛ ᴛʜᴇ 𝓓ᴇᴠᴇʟᴏᴘᴇʀ__\n\n  **𝙃𝙚 𝙬𝙞𝙡𝙡 𝙝𝙚𝙡𝙥 𝙮𝙤𝙪**",
                     disable_web_page_preview=True
                 )
                 return
@@ -64,14 +64,14 @@ async def start(b, m):
                         ]
                     ]
                 ),
-                parse_mode="HTML"
+                
             )
              return
         except Exception:
             await b.send_message(
                 chat_id=m.chat.id,
-                text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b> <a href='http://t.me/king_pk'>CLICK HERE FOR SUPPORT </a></b>",
-                parse_mode="HTML",
+                text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b> <a href='https://t.me/king_pk'>CLICK HERE FOR SUPPORT </a></b>",
+                
                 disable_web_page_preview=True)
             return
     await StreamBot.send_photo(
@@ -81,7 +81,7 @@ async def start(b, m):
         reply_markup=buttonz)
 
 
-@StreamBot.on_message((filters.command("help") | filters.regex('help📚')) & filters.private & ~filters.edited)
+@StreamBot.on_message((filters.command("help") | filters.regex('help📚')) & filters.private )
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
@@ -96,7 +96,7 @@ async def help_handler(bot, message):
                 await bot.send_message(
                     chat_id=message.chat.id,
                     text="<i>Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ FROM USING ᴍᴇ. Cᴏɴᴛᴀᴄᴛ ᴛʜᴇ Dᴇᴠᴇʟᴏᴘᴇʀ</i>",
-                    parse_mode="HTML",
+                    
                     disable_web_page_preview=True
                 )
                 return
@@ -104,7 +104,7 @@ async def help_handler(bot, message):
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
                 photo="https://telegra.ph/file/c08ca0437a7444b0d479a.jpg",
-                Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 CHANNEL 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
+                Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -112,25 +112,25 @@ async def help_handler(bot, message):
                         ]
                     ]
                 ),
-                parse_mode="markdown"
+                
             )
             return
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
                 text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [Pradeep Nagal](https://t.me/king_pk).",
-                parse_mode="markdown",
                 disable_web_page_preview=True)
             return
     await message.reply_text(
         text="""<b> Send me any file or video i will give you streamable link and download link.</b>\n
 <b> I also support Channels, add me to you Channel and send any media files and see miracle✨ also send /list to know all commands""",
-        parse_mode="HTML",
+        
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ DEV", url="https://t.me/king_pk")],
+[InlineKeyboardButton("💁‍♂️ DEV", url="https://t.me/king_pk")],
                 [InlineKeyboardButton("💥 FOLLOW", url="https://instagram.com/pradeep___nagal")]
+            
             ]
         )
     )
