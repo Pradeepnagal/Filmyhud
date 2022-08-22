@@ -1,14 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head>   <meta charset="UTF-8">
     <meta property="og:image" content="https://telegra.ph/file/c08ca0437a7444b0d479a.jpg" itemprop="thumbnailUrl">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>%s</title>
-   
-   
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
 <style>
     .wrapper{
@@ -62,30 +62,65 @@
 </head>
 
 <body>
-    <header><script type='text/javascript' src='//pl17620938.highperformancegate.com/e1/1b/5a/e11b5a1c7beaefbd7daec42f72f1ea11.js'></script>
-      <a href="https://filmyhud.blogspot.com>"  <div class="wrapper">
+    <header>
+        <a href="https://filmyhud.blogspot.com>"  <div class="wrapper">
             <div class="box2">
                 FILMYHUD
             </div>
             
-        </div></a>
-        <hr>
+        </div></a><hr>
+
         <div id="file-name">
            <marquee direction = "left"> %s</marquee>
         </div>
     </header>
-<hr>
-   <div class="wrapper">
-       <div class="box">
+
+        <hr>
+    <div class="container">
         <tag src="%s" class="player"></tag>
     </div>
-    </div>
-   <hr>
-   
-<div>
-   <a href="%s"><button class="buttonpk">Download</button></a>
+    
+ <hr>
+
+    <footer>
+	    <div>
+   <a href="https://t.me/king_pk"><button class="buttonpk">REPORT ERROR</button></a>
 </div>
-<div>
+    </footer>
+    
+    
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+	<script>
+        const controls = [
+              'play-large',
+              'rewind',
+              'play', 
+              'fast-forward', 
+              'progress', 
+              'current-time',
+              'duration',
+              'mute',
+              'volume',
+              'captions',
+              'settings',
+              'pip',
+              'airplay',
+              'download',
+              'fullscreen'
+            ];
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = Plyr.setup('.player', { controls });
+        });
+
+        const body = document.querySelector('body');
+        const footer = document.querySelector('footer');
+        const toogle = document.querySelector('.toogle');
+        toogle.onclick = () => {
+            body.classList.toggle('dark')
+            footer.classList.toggle('dark')
+        }
+    </script>
+    <div>
 
         <script async="async" data-cfasync="false" src="//pl17620645.highperformancegate.com/b9ae47282d55ecc12a00ba6b63caa23f/invoke.js"></script>
 <div id="container-b9ae47282d55ecc12a00ba6b63caa23f"></div>
@@ -284,24 +319,5 @@
    
         
     </div>
-    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-	<script>
-        const controls = [
-              'play-large',
-              'rewind',
-              'play', 
-              'fast-forward', 
-              'progress', 
-              'current-time',
-              'duration',
-              'fullscreen'
-            ];
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = Plyr.setup('.player', { controls });
-        });
-
-       
-        
-    </script>
 </body>
 </html>
