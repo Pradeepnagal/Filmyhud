@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
     <meta name="referrer" content="always" />
@@ -6,8 +5,7 @@
 
  <meta property="og:image" content="https://telegra.ph/file/c08ca0437a7444b0d479a.jpg" itemprop="thumbnailUrl">
   <title>%s</title>
-    <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css">
-    <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .container{
@@ -80,46 +78,9 @@
              <div id="file-name">
            <marquee direction = "left"> %s</marquee>
         </div>
-            <div id='vidiv'>
-    <video id="video-fully-responsive" controls >
-        <source src="%s" type="video/mp4">
-    </video>
-    <script type="text/javascript">
-        var video = document.querySelector("video");
-        var src = video.firstElementChild
-
-        src.addEventListener('error', function(evt) {
-            // video.addEventListener('play', function(evt) {
-            //     document.getElementById('vidiv').style.display = 'none';
-            // })
-            document.getElementById('vidiv').style.display = 'none';
-        }); 
-        var testVideo = fluidPlayer(
-            "video-fully-responsive",
-            '',
-            {
-                responsive: true,
-            }
-        );
-    </script>
-
-    <!-- <video id='dash-video'>
-        <source src="%s" type='application/dash+xml'/>
-    </video>
-    
-    <script>
-    fluidPlayer(
-        'dash-video',
-        {
-            layoutControls: {
-                fillToContainer: true
-            }
-        }
-    );
-    </script> -->
-
- 
-</div>
+           <div>
+                <tag src="%s"></tag>
+           </div>
             <a href=%s>
             <button class="btn"><i class="fa fa-download"></i> Download</button>
             </a>
