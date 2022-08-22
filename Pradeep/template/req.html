@@ -1,88 +1,154 @@
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1673265535621182"
-     crossorigin="anonymous"></script>
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-    <meta charset="UTF-8">
-    <meta property="og:image" content="https://telegra.ph/file/c08ca0437a7444b0d479a.jpg" itemprop="thumbnailUrl">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="always" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>%s</title>
-    <link rel="stylesheet" type='text/css' href="https://adarsh-goel.github.io/resources/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
 
+ <meta property="og:image" content="https://telegra.ph/file/c08ca0437a7444b0d479a.jpg" itemprop="thumbnailUrl">
+  <title>%s</title>
+    <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css">
+    <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container{
+            text-align: center;
+            margin: 0% auto;
+        }
+        @media (orientation: landscape) {
+            .container{
+                max-width: 750px;
+            }
+        }
+        .main{
+            /* border: 1px solid DodgerBlue;  */
+            padding: 0px 2%;
+        }
+        h1{
+            margin-top: 5%;
+            color: grey;
+            width: fit-width;
+            word-wrap: break-word;
+            line-height: 20px;
+        }
+        .filename{
+            color: DodgerBlue;
+            font-size: calc(10px + 1.1vw);
+            word-wrap: break-word;
+            font-weight: bold;
+        }
+        #video-fully-responsive{
+            width: 100%;
+        }
+        #vast_video_loading_video-fully-responsive{
+            height: 0;
+        }
+        .btn {
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 0% auto;
+            margin-top: 20px;
+            /* margin-bottom: 20px; */
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: RoyalBlue;
+        }
+        .btnn {
+            background-color:#f0ad4e;
+            border: none;
+            color: white;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 0% auto;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 20%;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <div class="toogle"></div>
-        <div id="file-name">
+ 
+    <div class="container">
+        <div class="main">
+       
+
+             <div id="file-name">
            <marquee direction = "left"> %s</marquee>
         </div>
-    </header>
+            <div id='vidiv'>
+    <video id="video-fully-responsive" controls >
+        <source src="%s" type="video/mp4">
+    </video>
+    <script type="text/javascript">
+        var video = document.querySelector("video");
+        var src = video.firstElementChild
 
-    <div class="container">
-        <tag src="%s" class="player"></tag>
-    </div>
+        src.addEventListener('error', function(evt) {
+            // video.addEventListener('play', function(evt) {
+            //     document.getElementById('vidiv').style.display = 'none';
+            // })
+            document.getElementById('vidiv').style.display = 'none';
+        }); 
+        var testVideo = fluidPlayer(
+            "video-fully-responsive",
+            '',
+            {
+                responsive: true,
+            }
+        );
+    </script>
+
+    <!-- <video id='dash-video'>
+        <source src="%s" type='application/dash+xml'/>
+    </video>
     
-    <div class="ads">
-    <amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-1673265535621182"
-     data-ad-slot="6571119578"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
-<br><amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-1673265535621182"
-     data-ad-slot="6571119578"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
+    <script>
+    fluidPlayer(
+        'dash-video',
+        {
+            layoutControls: {
+                fillToContainer: true
+            }
+        }
+    );
+    </script> -->
+
+ 
+</div>
+            <a href=%s>
+            <button class="btn"><i class="fa fa-download"></i> Download</button>
+            </a>
+            <a href="https://t.me/king_pk" target="_blank" style="text-decoration: none;">
+                <button class="btnn">Report</button>
+            </a>
+        </div>
+    </div>
+ <div style="text-align: center">
+    <script type="text/javascript">
+	atOptions = {
+		'key' : 'da49e17ecd44a2a9835c8fa0481aff90',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivecreativeformats.com/da49e17ecd44a2a9835c8fa0481aff90/invoke.js"></scr' + 'ipt>');
+</script>
 </div>
 
-    <footer>
-	    <align="Centre"><a href="https://filmyhud.blogspot.com" style="color:blue" >DOWNLOAD HINDI HD MOVIES &emsp; &emsp;</a></align>
+    
+    <script async="async" data-cfasync="false" src="//pl17620645.highperformancegate.com/b9ae47282d55ecc12a00ba6b63caa23f/invoke.js"></script>
+<div id="container-b9ae47282d55ecc12a00ba6b63caa23f"></div>
+</div><div>
+  <footer style="font-size:30px;">
+	    <a href="https://filmyhud.blogspot.com" style="color:blue" >DOWNLOAD HINDI HD MOVIES &emsp; &emsp;</a></align>
     </footer>
     
-    
-    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-	<script>
-        const controls = [
-              'play-large',
-              'rewind',
-              'play', 
-              'fast-forward', 
-              'progress', 
-              'current-time',
-              'duration',
-              'mute',
-              'volume',
-              'captions',
-              'settings',
-              'pip',
-              'airplay',
-              'download',
-              'fullscreen'
-            ];
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = Plyr.setup('.player', { controls });
-        });
-
-        const body = document.querySelector('body');
-        const footer = document.querySelector('footer');
-        const toogle = document.querySelector('.toogle');
-        toogle.onclick = () => {
-            body.classList.toggle('dark')
-            footer.classList.toggle('dark')
-        }
-    </script>
+</div>
 </body>
 </html>
