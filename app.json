@@ -1,3 +1,4 @@
+
 {
 
   "name": "F2L",
@@ -56,11 +57,15 @@
 
           "description": "Get this value from https://my.telegram.org"
 
+"value":"18010716",
+
       },
 
       "API_HASH": {
 
           "description": "Get this value from https://my.telegram.org"
+
+"value":"e9f8bea2322b86e16d7206ac2d3c24fe",
 
       },
 
@@ -68,25 +73,35 @@
 
           "description": "Get this value from @BotFather"
 
+"value":"5063040394:AAGRcSfLI3a2prNsTNnTdLgdUqA73JJcGu0",
+
       },
 
       "BIN_CHANNEL": {
 
           "description": "The BIN Channel ID. Read the readme for more info about this var"
 
+"value":"-1001683719600",
+
           
 
       },
+
    "DATABASE_URL": {
 
           "description": "MongoDB URI for saving User IDs when they first Start the Bot. We will use that for Broadcasting to them. I will try to add more features related with Database. If you need help search for a tutorial on youtbe"
 
+"value":"mongodb+srv://pradeep___nagal:nagal702@filmyhud.ris9a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+
       },
+
     
 
       "OWNER_ID": {
 
           "description": "Your Telegram User ID  like 1234509"
+
+"value":"874272324",
 
       },
 
@@ -102,7 +117,7 @@
 
           "description": "Put a Public Channel Username  without @, so every user have to Join that channel to use the bot. Must add bot to channel as Admin to work properly.IF DONT WANT KEEP VALUE AS None",
 
-          "value":"None",
+          "value":"bkup_film",
 
           "required": false
 
@@ -113,6 +128,8 @@
       "OWNER_USERNAME": {
 
           "description": "Enter your username without @  example  king_pk ."
+
+   "value":"king_pk",
 
       },
 
@@ -221,4 +238,5 @@
   }
 
 }
+
 
